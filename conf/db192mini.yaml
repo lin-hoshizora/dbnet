@@ -1,0 +1,9 @@
+builder: dbnet_fpn
+options:
+  input_shape: [1344, 1024, 3]
+  fpn_channels: 192
+  backbone: mobile_small_mini
+  k: 50
+  prob_init: 0.0001
+  threshold_init: 0.0001
+  kernel_init: he_normal

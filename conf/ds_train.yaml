@@ -1,0 +1,21 @@
+buf_size: 500
+batch_size: 1
+train: true
+tfrecord: /datasets/almex_insurance/almex_train.tfrecord 
+parse_params:
+  folder: /datasets/almex_insurance/img
+  tags:
+    - ''
+    - _clahe
+    - _dilate
+    - _erode
+    - _fog
+    - _mixup
+    - _rain
+    - _snow
+    - _shadow_45
+    - _shadow_45_rev
+    - _shadow_x
+    - _shadow_x_rev
+    - _shadow_y
+    - _shadow_y_rev

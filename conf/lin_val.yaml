@@ -1,0 +1,8 @@
+buf_size: 500
+batch_size: 1
+train: false
+tfrecord: /workspace/dbnet.release.lin/lin/train_500_val.tfrecord
+parse_params:
+  folder: /datasets/almex_insurance/img
+  tags:
+    - ''

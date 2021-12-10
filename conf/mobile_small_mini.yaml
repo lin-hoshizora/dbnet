@@ -1,0 +1,13 @@
+name: MobileNetV3Small
+
+options:
+  include_top: false
+  weights: imagenet
+  alpha: 1.0
+  minimalistic: true
+
+feature_names:
+  downsample4: 'expanded_conv/project/BatchNorm'
+  downsample8: 'expanded_conv_2/Add'
+  downsample16: 'expanded_conv_7/Add'
+  downsample32: 'expanded_conv_10/Add'

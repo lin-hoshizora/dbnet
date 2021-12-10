@@ -1,0 +1,11 @@
+name: EfficientNetB0
+
+options:
+  include_top: false
+  weights: imagenet
+
+feature_names:
+  downsample4: 'block2b_add'
+  downsample8: 'block3b_add'
+  downsample16: 'block5c_add'
+  downsample32: 'block6d_add'

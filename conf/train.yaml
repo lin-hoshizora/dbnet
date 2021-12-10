@@ -1,0 +1,42 @@
+model: db192mini
+
+datasets:
+  train: ds_train
+  val: ds_val
+
+loss:
+  prob: bce
+  threshold: l1
+  binary: dice
+
+weights:
+  prob: 1.0
+  threshold: 10.0
+  binary: 1.0
+
+optimizer:
+  name: RectifiedAdam
+  options:
+    amsgrad: true
+  lookahead: true
+  mixed_precision: true
+
+callbacks:
+  ModelCheckpoint:
+    filepath: db192mini
+    monitor: val_prob_loss
+    save_weights_only: true
+    save_best_only: true
+    verbose: 1
+  EarlyStopping:
+    patience: 10
+    min_delta: 0.00001
+    monitor: val_loss
+    verbose: 1
+  WandbCallback:
+    project: dbnet_test 
+
+fit:
+  epochs: 30 
+  steps_per_epoch: 500
+  validation_steps: 50

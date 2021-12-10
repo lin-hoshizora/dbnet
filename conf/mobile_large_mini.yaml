@@ -1,0 +1,13 @@
+name: MobileNetV3Large
+
+options:
+  include_top: false
+  weights: imagenet
+  alpha: 1.0
+  minimalistic: true
+
+feature_names:
+  downsample32: 'expanded_conv_14/Add'
+  downsample16: 'expanded_conv_11/Add'
+  downsample8: 'expanded_conv_5/Add'
+  downsample4: 'expanded_conv_2/Add'

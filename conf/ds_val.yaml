@@ -1,0 +1,8 @@
+buf_size: 1
+batch_size: 1
+train: false
+tfrecord: /datasets/almex_insurance/almex_val.tfrecord 
+parse_params:
+  folder: /datasets/almex_insurance/img
+  tags:
+    - ''
